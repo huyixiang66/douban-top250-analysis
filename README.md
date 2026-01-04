@@ -25,12 +25,16 @@ douban-top250-analysis/
 ├── output/
 │   └── *.png
 └── README.md
-数据分析结果
+
+## 数据分析结果
+
 ### 1️⃣ 电影评分分布
 
 展示豆瓣 Top250 电影的整体评分分布情况。
 
 ![Rating Distribution](output/rating_distribution.png)
+
+---
 
 ### 2️⃣ 各年代电影数量分布
 
@@ -38,17 +42,22 @@ douban-top250-analysis/
 
 ![Movies by Decade](output/movies_by_decade.png)
 
+---
+
 ### 3️⃣ Top10 高分电影
 
 评分最高的 10 部电影如下：
 
 ![Top10 Movies](output/top10_movies.png)
 
+---
+
 ### 4️⃣ 电影上映年份趋势
 
 Top250 电影在不同年份的分布趋势。
 
 ![Movies by Year](output/movies_by_year.png)
+
 <p align="center">
   <img src="output/top10_movies.png" width="600">
 </p>
