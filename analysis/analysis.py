@@ -14,6 +14,7 @@ def main():
     # 1️⃣ 读取数据
     # ======================
     df = pd.read_csv("data/douban_top250.csv")
+    print(df.columns)
     df["rating"] = df["rating"].astype(float)
     df["year"] = df["year"].astype(int)
 
@@ -72,8 +73,24 @@ def main():
     plt.savefig(f"{output_dir}/movies_by_year.png")
     plt.close()
 
+        # ======================
+    # 6️⃣ 不同年代的平均评分
+    # ======================
+    decade_avg_rating = df.groupby("decade")["rating"].mean()
+
+    plt.figure()
+    decade_avg_rating.plot(marker="o")
+    plt.title("Average Rating by Decade")
+    plt.xlabel("Decade")
+    plt.ylabel("Average Rating")
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/avg_rating_by_decade.png")
+    plt.close()
+
+
     print("✅ 所有图表已保存到 output/ 目录")
 
 
 if __name__ == "__main__":
     main()
+
